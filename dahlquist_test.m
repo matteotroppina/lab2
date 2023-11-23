@@ -79,21 +79,21 @@ for i = 1:length(dt_vector)
     hold on;
     y_euler = expl_euler(x_0, dt, t_end, f);
     error_matrix(1,i) = E(y_euler, dt, t_end, f_sol(t_vector)); %errors for euler are stored in the first row
-    text(i, 0.55, sprintf('e_{%d} = \n %.4e', i, error_matrix(1,i))); %prints errors on plot
+    text(i, 0.55, sprintf('e_{\\deltat%d} = \n %.4e', i, error_matrix(1,i))); %prints errors on plot
 
     %heun
     figure(3);
     hold on;
     y_heun = heun(x_0, dt, t_end, f);
     error_matrix(2,i) = E(y_heun, dt, t_end, f_sol(t_vector)); %errors for heun are stored in the second row
-    text(i, 0.55, sprintf('e_{%d} = \n %.4e', i, error_matrix(2,i))); %prints errors on plot
+    text(i, 0.55, sprintf('e_{\\deltat%d} = \n %.4e', i, error_matrix(2,i))); %prints errors on plot
     
     %rk4
     figure(4);
     hold on;
     y_rk4 = runge_kutta_4(x_0, dt, t_end, f);
     error_matrix(3,i) = E(y_rk4, dt, t_end, f_sol(t_vector)); %errors for rk4 are stored in the third row
-    text(i, 0.55, sprintf('e_{%d} = \n %.4e', i, error_matrix(3,i))); %prints errors on plot
+    text(i, 0.55, sprintf('e_{\\deltat%d} = \n %.4e', i, error_matrix(3,i))); %prints errors on plot
 
 end
 
