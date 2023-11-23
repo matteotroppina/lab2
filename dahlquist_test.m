@@ -88,8 +88,6 @@ for i = 1:length(dt_vector)
     text(i, 0.55, sprintf('e_{%d} = \n %.4e',i, error_matrix(3,i))); %prints errors on plot
 end
 
-error_matrix
-
 %strings for plot legends
 analytic = 'y(t) = \ite^{\lambda t}';
 d1 = sprintf('\\deltat_{1} = %.3f', dt_vector(1));
