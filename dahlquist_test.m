@@ -72,7 +72,7 @@ for i = 1:length(dt_vector)
 
     dt = dt_vector(i);
     t_vector = 0:dt:t_end;    %time steps vector
-    legend_str(i + 1) = sprintf('\\deltat_{%d} = %.3f', i, dt);
+    legend_str(i + 1) = sprintf('\\deltat_{%d} = %.3f', i, dt); %fills the legend strings
 
     %expl_euler
     figure(2);
